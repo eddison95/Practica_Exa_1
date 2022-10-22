@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "286361349691",
+    "project_id": "practica-examen-52823",
+    "storage_bucket": "practica-examen-52823.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:286361349691:android:c6ab672f6a671db058761e",
+        "android_client_info": {
+          "package_name": "com.example.practica_exa_1"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "286361349691-cu9chn4490s93hft9c76a378aetu60bn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBxQBhhdhcumYOHk6mtCaxvW4CBWIR-FHg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "286361349691-cu9chn4490s93hft9c76a378aetu60bn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

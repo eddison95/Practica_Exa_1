@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">286361349691-cu9chn4490s93hft9c76a378aetu60bn.apps.googleusercontent.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">286361349691</string>
+    <string name="google_api_key" translatable="false">AIzaSyBxQBhhdhcumYOHk6mtCaxvW4CBWIR-FHg</string>
+    <string name="google_app_id" translatable="false">1:286361349691:android:c6ab672f6a671db058761e</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyBxQBhhdhcumYOHk6mtCaxvW4CBWIR-FHg</string>
+    <string name="google_storage_bucket" translatable="false">practica-examen-52823.appspot.com</string>
+    <string name="project_id" translatable="false">practica-examen-52823</string>
+</resources>
