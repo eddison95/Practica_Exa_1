@@ -16,8 +16,8 @@ data class Examen(
     val nombre: String,
     @ColumnInfo(name = "Capital")
     val capital: String?,
-    @ColumnInfo(name = "Población")
-    val población: Double?,
+    @ColumnInfo(name = "Poblacion")
+    val poblacion: Double?,
     @ColumnInfo(name = "Abreviatura")
     val abreviatura: String?,
     @ColumnInfo(name = "latitud")

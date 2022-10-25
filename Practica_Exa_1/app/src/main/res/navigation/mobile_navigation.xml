@@ -3,13 +3,20 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/nav_home">
+    app:startDestination="@+id/nav_exam">
 
     <fragment
-        android:id="@+id/nav_home"
-        android:name="com.example.practica_exa_1.ui.home.HomeFragment"
-        android:label="@string/menu_home"
-        tools:layout="@layout/fragment_home" />
+        android:id="@+id/nav_exam"
+        android:name="com.example.practica_exa_1.ui.exam.ExamenFragment"
+        android:label="@string/menu_exam"
+        tools:layout="@layout/fragment_exam" >
+        <action
+            android:id="@+id/action_nav_exam_to_addExamenFragment"
+            app:destination="@id/addExamenFragment" />
+        <action
+            android:id="@+id/action_nav_exam_to_updateExamenFragment"
+            app:destination="@id/updateExamenFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/nav_gallery"
@@ -22,4 +29,25 @@
         android:name="com.example.practica_exa_1.ui.slideshow.SlideshowFragment"
         android:label="@string/menu_slideshow"
         tools:layout="@layout/fragment_slideshow" />
+    <fragment
+        android:id="@+id/addExamenFragment"
+        android:name="com.example.practica_exa_1.ui.exam.AddExamenFragment"
+        android:label="fragment_add_examen"
+        tools:layout="@layout/fragment_add_examen" >
+        <action
+            android:id="@+id/action_addExamenFragment_to_nav_exam"
+            app:destination="@id/nav_exam" />
+    </fragment>
+    <fragment
+        android:id="@+id/updateExamenFragment"
+        android:name="com.example.practica_exa_1.ui.exam.UpdateExamenFragment"
+        android:label="@string/bt_update"
+        tools:layout="@layout/fragment_update_examen" >
+        <action
+            android:id="@+id/action_updateExamenFragment_to_nav_exam"
+            app:destination="@id/nav_exam" />
+        <argument
+            android:name="examen"
+            app:argType="com.example.practica_exa_1.model.Examen" />
+    </fragment>
 </navigation>

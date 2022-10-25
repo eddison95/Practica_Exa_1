@@ -40,7 +40,7 @@ public final class ExamenDao_Impl implements ExamenDao {
     this.__insertionAdapterOfExamen = new EntityInsertionAdapter<Examen>(__db) {
       @Override
       public String createQuery() {
-        return "INSERT OR IGNORE INTO `estado` (`id`,`Nombre`,`Capital`,`Población`,`Abreviatura`,`latitud`,`longitud`,`Medida`) VALUES (nullif(?, 0),?,?,?,?,?,?,?)";
+        return "INSERT OR IGNORE INTO `estado` (`id`,`Nombre`,`Capital`,`Poblacion`,`Abreviatura`,`latitud`,`longitud`,`Medida`) VALUES (nullif(?, 0),?,?,?,?,?,?,?)";
       }
 
       @Override
@@ -56,10 +56,10 @@ public final class ExamenDao_Impl implements ExamenDao {
         } else {
           stmt.bindString(3, value.getCapital());
         }
-        if (value.getPoblación() == null) {
+        if (value.getPoblacion() == null) {
           stmt.bindNull(4);
         } else {
-          stmt.bindDouble(4, value.getPoblación());
+          stmt.bindDouble(4, value.getPoblacion());
         }
         if (value.getAbreviatura() == null) {
           stmt.bindNull(5);
@@ -97,7 +97,7 @@ public final class ExamenDao_Impl implements ExamenDao {
     this.__updateAdapterOfExamen = new EntityDeletionOrUpdateAdapter<Examen>(__db) {
       @Override
       public String createQuery() {
-        return "UPDATE OR IGNORE `estado` SET `id` = ?,`Nombre` = ?,`Capital` = ?,`Población` = ?,`Abreviatura` = ?,`latitud` = ?,`longitud` = ?,`Medida` = ? WHERE `id` = ?";
+        return "UPDATE OR IGNORE `estado` SET `id` = ?,`Nombre` = ?,`Capital` = ?,`Poblacion` = ?,`Abreviatura` = ?,`latitud` = ?,`longitud` = ?,`Medida` = ? WHERE `id` = ?";
       }
 
       @Override
@@ -113,10 +113,10 @@ public final class ExamenDao_Impl implements ExamenDao {
         } else {
           stmt.bindString(3, value.getCapital());
         }
-        if (value.getPoblación() == null) {
+        if (value.getPoblacion() == null) {
           stmt.bindNull(4);
         } else {
-          stmt.bindDouble(4, value.getPoblación());
+          stmt.bindDouble(4, value.getPoblacion());
         }
         if (value.getAbreviatura() == null) {
           stmt.bindNull(5);
@@ -206,7 +206,7 @@ public final class ExamenDao_Impl implements ExamenDao {
           final int _cursorIndexOfId = CursorUtil.getColumnIndexOrThrow(_cursor, "id");
           final int _cursorIndexOfNombre = CursorUtil.getColumnIndexOrThrow(_cursor, "Nombre");
           final int _cursorIndexOfCapital = CursorUtil.getColumnIndexOrThrow(_cursor, "Capital");
-          final int _cursorIndexOfPoblaciN = CursorUtil.getColumnIndexOrThrow(_cursor, "Población");
+          final int _cursorIndexOfPoblacion = CursorUtil.getColumnIndexOrThrow(_cursor, "Poblacion");
           final int _cursorIndexOfAbreviatura = CursorUtil.getColumnIndexOrThrow(_cursor, "Abreviatura");
           final int _cursorIndexOfLatitud = CursorUtil.getColumnIndexOrThrow(_cursor, "latitud");
           final int _cursorIndexOfLongitud = CursorUtil.getColumnIndexOrThrow(_cursor, "longitud");
@@ -228,11 +228,11 @@ public final class ExamenDao_Impl implements ExamenDao {
             } else {
               _tmpCapital = _cursor.getString(_cursorIndexOfCapital);
             }
-            final Double _tmpPoblación;
-            if (_cursor.isNull(_cursorIndexOfPoblaciN)) {
-              _tmpPoblación = null;
+            final Double _tmpPoblacion;
+            if (_cursor.isNull(_cursorIndexOfPoblacion)) {
+              _tmpPoblacion = null;
             } else {
-              _tmpPoblación = _cursor.getDouble(_cursorIndexOfPoblaciN);
+              _tmpPoblacion = _cursor.getDouble(_cursorIndexOfPoblacion);
             }
             final String _tmpAbreviatura;
             if (_cursor.isNull(_cursorIndexOfAbreviatura)) {
@@ -258,7 +258,7 @@ public final class ExamenDao_Impl implements ExamenDao {
             } else {
               _tmpMedida = _cursor.getDouble(_cursorIndexOfMedida);
             }
-            _item = new Examen(_tmpId,_tmpNombre,_tmpCapital,_tmpPoblación,_tmpAbreviatura,_tmpLatitud,_tmpLongitud,_tmpMedida);
+            _item = new Examen(_tmpId,_tmpNombre,_tmpCapital,_tmpPoblacion,_tmpAbreviatura,_tmpLatitud,_tmpLongitud,_tmpMedida);
             _result.add(_item);
           }
           return _result;
