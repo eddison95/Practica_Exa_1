@@ -37,9 +37,9 @@ public final class ExamenDatabase_Impl extends ExamenDatabase {
     final SupportSQLiteOpenHelper.Callback _openCallback = new RoomOpenHelper(configuration, new RoomOpenHelper.Delegate(1) {
       @Override
       public void createAllTables(SupportSQLiteDatabase _db) {
-        _db.execSQL("CREATE TABLE IF NOT EXISTS `estado` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `Nombre` TEXT NOT NULL, `Capital` TEXT, `Población` REAL, `Abreviatura` TEXT, `latitud` REAL, `longitud` REAL, `Medida` REAL)");
+        _db.execSQL("CREATE TABLE IF NOT EXISTS `estado` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `Nombre` TEXT NOT NULL, `Capital` TEXT, `Poblacion` REAL, `Abreviatura` TEXT, `latitud` REAL, `longitud` REAL, `Medida` REAL)");
         _db.execSQL("CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)");
-        _db.execSQL("INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '48cccf88487f4cb200986411953d791c')");
+        _db.execSQL("INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '8e805cc4148ebb53de981c97d87c0fc3')");
       }
 
       @Override
@@ -87,7 +87,7 @@ public final class ExamenDatabase_Impl extends ExamenDatabase {
         _columnsEstado.put("id", new TableInfo.Column("id", "INTEGER", true, 1, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsEstado.put("Nombre", new TableInfo.Column("Nombre", "TEXT", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsEstado.put("Capital", new TableInfo.Column("Capital", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
-        _columnsEstado.put("Población", new TableInfo.Column("Población", "REAL", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsEstado.put("Poblacion", new TableInfo.Column("Poblacion", "REAL", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsEstado.put("Abreviatura", new TableInfo.Column("Abreviatura", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsEstado.put("latitud", new TableInfo.Column("latitud", "REAL", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsEstado.put("longitud", new TableInfo.Column("longitud", "REAL", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
@@ -103,7 +103,7 @@ public final class ExamenDatabase_Impl extends ExamenDatabase {
         }
         return new RoomOpenHelper.ValidationResult(true, null);
       }
-    }, "48cccf88487f4cb200986411953d791c", "6d86f7be640dee53623bb85edf82b6d2");
+    }, "8e805cc4148ebb53de981c97d87c0fc3", "62a82f738cb0548fb5ada883c387914b");
     final SupportSQLiteOpenHelper.Configuration _sqliteConfig = SupportSQLiteOpenHelper.Configuration.builder(configuration.context)
         .name(configuration.name)
         .callback(_openCallback)
